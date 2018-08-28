@@ -30,13 +30,10 @@ if __name__ == '__main__':
         Time Complexity = O(N)
         Space Complexity = O(1)
 
-        Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
-        The digits are stored such that the most significant digit is at the head of the list, and each
-        element in the array contain a single digit.
-        You may assume the integer does not contain any leading zero, except the number 0 itself.
+        Given two binary strings, return their sum (also a binary string).
+        The input strings are both non-empty and contains only characters 1 or 0.
 
         Example:
-        Input: [1,2,3]
-        Output: [1,2,4]
-        Explanation: The array represents the integer 123.
+        Input: a = "1010", b = "1011"
+        Output: "10101"
     """
