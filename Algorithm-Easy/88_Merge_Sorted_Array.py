@@ -7,28 +7,20 @@ class Solution:
         :type n: int
         :rtype: void Do not return anything, modify nums1 in-place instead.
         """
-        last = m + n - 1
-        i = m - 1
-        j = n - 1
-
-        while i >= 0 and j >= 0:
-            if nums1[i] > nums2[j]:
-                nums1[last] = nums1[i]
-                last = last - 1
-                i = i - 1
+        while m > 0 and n > 0:
+            if nums1[m-1] < nums2[n-1]:
+                nums1[m-1+n] = nums2[n-1]
+                n = n - 1
             else:
-                nums1[last] = nums2[j]
-                last = last - 1
-                j = j - 1
-
-        while j >= 0:
-            nums1[last] = nums2[j]
-            last = last - 1
-            j = j - 1
+                nums1[m-1+n], nums1[m-1] = nums1[m-1], nums1[m-1+n]
+                m = m -1
+        if m == 0 and n>0:
+            nums1[:n] = nums2[:n]
+        return nums1
 
 if __name__ == "__main__":
     nums1 = [1, 3, 5, 0, 0, 0, 0]
-    nums2 = [2, 4, 6, 7]
+    nums2 = [3, 4, 6, 7]
     print(Solution().merge(nums1, 3, nums2, 4))
 
 
@@ -51,4 +43,6 @@ if __name__ == "__main__":
             nums1 = [1,2,3,0,0,0], m = 3
             nums2 = [2,5,6],       n = 3
             Output: [1,2,2,3,5,6]
+
+            Answer may have some problems.
     """
