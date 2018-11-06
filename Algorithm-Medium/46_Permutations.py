@@ -34,4 +34,8 @@ class Solution(object):
           [3,1,2],
           [3,2,1]
         ]
+
+        记传入数组为nums，若nums的长度不大于1，则直接返回[nums]
+
+        遍历nums，从中抽取一个数num，递归计算剩余数字组成的数组n，然后将num与结果合并
     """
