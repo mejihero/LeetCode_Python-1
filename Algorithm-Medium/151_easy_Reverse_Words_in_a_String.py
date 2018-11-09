@@ -4,19 +4,21 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        if s == "": return s
+        if s == "":
+            return s
         ls = s.split()
         print(ls)
 
-        if ls ==[]: return ""
+        if ls ==[]:
+            return ""
 
-        ns = ""
+        result = ""
         print(len(ls))
         for i in range(0,len(ls)-1):
-            ns+=ls[len(ls)-1-i]+" "
-        print(ns)
-        ns+=ls[0]
-        return ns
+            result += ls[len(ls)-1-i]+" "
+        print(result)
+        result += ls[0]
+        return result
 
 if __name__ == "__main__":
     print(Solution().reverseWords("the sky is blue"))
@@ -42,5 +44,12 @@ if __name__ == "__main__":
             You need to reduce multiple spaces between two words to a single space in the reversed string.
 
         Follow up: For C programmers, try to solve it in-place in O(1) space.
+
+        Another Solution:
+
+        s=s.split()
+        s=list(reversed(s))
+        s=" ".join(s)
+        return s
 
     """

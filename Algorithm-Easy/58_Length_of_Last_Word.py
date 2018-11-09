@@ -8,7 +8,6 @@ class Solution:
         local_count = 0
         for i in range(len(s)):
             if s[i] == ' ':
-                count = max(count, local_count)
                 local_count = 0
             else:
                 local_count += 1
