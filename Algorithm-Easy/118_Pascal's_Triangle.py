@@ -4,9 +4,6 @@ class Solution:
         :type numRows: int
         :rtype: List[List[int]]
         """
-        if numRows == 0:
-            return None
-
         result = []
         for i in range(numRows):
             result.append([])
