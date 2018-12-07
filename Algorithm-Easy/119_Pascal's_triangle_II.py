@@ -7,9 +7,13 @@ class Solution:
         result = [1] + [0] * rowIndex
         for i in range(rowIndex):
             result[0] = 1
+            print(' ')
+            print('i', i)
             for j in range(i+1, 0, -1):
+                print('j',j)
                 result[j] = result[j] + result[j-1]
-            print(result)
+                print(result)
+            print('reuslt', result)
         return result
 
 if __name__ == '__main__':
