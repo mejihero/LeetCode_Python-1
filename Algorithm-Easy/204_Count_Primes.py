@@ -4,25 +4,21 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        if n <= 2:
+        if n <= 1:
             return 0
 
-        is_prime = [True] * n
-        num = n/2
-        for i in range(3, n, 2):
-            if i * i >= n:
-                break
-            if not is_prime[i]:
-                continue
+        nums = [None] * n
+        nums[0] = False
+        nums[1] = False
 
-            for j in range(i*i, n, 2*i):
-                if not is_prime[j]:
-                    continue
+        for i in range(n):
+            if nums[i] == None:
+                nums[i] = True
 
-                num -= 1
-                is_prime[j] = False
+                for j in range(i+i, n, i):
+                    nums[j] = False
 
-        return int(num)
+        return sum(nums)
 
 if __name__ == '__main__':
     print(Solution().countPrimes(10))

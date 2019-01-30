@@ -25,6 +25,8 @@ if __name__ == "__main__":
 
 
     """
+            The isalnum() method checks whether the string consists of alphanumeric characters.
+
             Time Complexity = O(n)
             Space Complexity = O(1)
 
